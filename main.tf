@@ -55,6 +55,6 @@ resource "google_compute_project_metadata_item" "git_patch_bucket_name" {
     value = "${random_id.git_patch_bucket_prefix.hex}-${local.git_patch_bucket_base_name}"
 }
 
-resource "google_compute_project_metadata_item" "git_patch_bucket_name" {
+resource "google_compute_project_metadata_item" "git_patch_startup_script" {
     key = "startup-script"
     value = file("${path.module}/set_up_functions.sh")
